@@ -1,20 +1,21 @@
 import { useState } from 'react';
 import axios from 'axios';
 
+
 function CustomerPage() {
     const [purchaseResponse, setPurchaseResponse] = useState("");
 
     const handleCheckDiscount = async () => {
-        const response = await axios.get('/api/customer/check-discount');
+        const response = await axios.get('http://localhost:3000/customer/check-discount');
         if(response.data.hasDiscount) {
-            console.log(`You have a discount! The code is ${response.data.discountCode}`);
+            setPurchaseResponse(`You have a discount! The code is ${response.data.discountCode}`);
         } else {
-            console.log('No discount available');
+            setPurchaseResponse(`No discount available!`);
         }
     };
 
     const handleMakePurchase = async () => {
-        const response = await axios.post('/api/customer/make-purchase');
+        const response = await axios.post('http://localhost:3000/customer/make-purchase');
         setPurchaseResponse(response.data);
     };
 

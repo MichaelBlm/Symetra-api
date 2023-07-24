@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import AdminPage from './AdminPage';
 import CustomerPage from './CustomerPage';
 
@@ -16,8 +16,10 @@ function App() {
                         </li>
                     </ul>
                 </nav>
-                <Route path="/admin" exact component={AdminPage} />
-                <Route path="/customer" exact component={CustomerPage} />
+                <Routes>
+                    <Route path="/admin" element={<AdminPage />} />
+                    <Route path="/customer" element={<CustomerPage />} />
+                </Routes>
             </div>
         </Router>
     );

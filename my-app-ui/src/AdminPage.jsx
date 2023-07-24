@@ -7,17 +7,17 @@ function AdminPage() {
     const [report, setReport] = useState({});
 
     const handleSetN = async () => {
-        const response = await axios.post('/api/admin/set-n', { n });
+        const response = await axios.post('http://localhost:3000/admin/set-n', { n });
         console.log(response.data);
     };
-
+    
     const handleSetDiscountCode = async () => {
-        const response = await axios.post('/api/admin/set-discount-code', { discountCode });
+        const response = await axios.post('http://localhost:3000/admin/set-discount-code', { discountCode });
         console.log(response.data);
     };
-
+    
     const handleGetReport = async () => {
-        const response = await axios.get('/api/admin/report');
+        const response = await axios.get('http://localhost:3000/admin/report');
         setReport(response.data);
     };
 
