@@ -1,6 +1,3 @@
-Sure, here's a basic README in Markdown format for your application:
-
-```markdown
 # Symetra API and UI
 
 This repository contains a Node.js Express API and a React UI for the Symetra application.
