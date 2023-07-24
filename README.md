@@ -34,11 +34,16 @@ npm install
 ```bash
 # Terminal 1
 cd Symetra-api/my-app-api
-npm start
+npm run start
 
 # Terminal 2
 cd Symetra-api/my-app-ui
-npm start
+npm run dev
+
+# Terminal 3
+# For running tests
+cd Symetra-api/my-app-api
+npm run test
 ```
 
 The API will start on `http://localhost:3000` (or your specified port), and the UI will start on `http://localhost:5173` (or your specified port).
