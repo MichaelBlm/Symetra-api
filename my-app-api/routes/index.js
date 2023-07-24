@@ -9,12 +9,12 @@ let transactionCount = 0;
 // Admin APIs
 router.post('/admin/set-n', function(req, res) {
     n = req.body.n;
-    res.send(`N set to ${n}`);
+    res.status(200).send(`N set to ${n}`);
 });
 
 router.post('/admin/set-discount-code', function(req, res) {
     discountCode = req.body.discountCode;
-    res.send(`Discount code set to ${discountCode}`);
+    res.status(200).send(`Discount code set to ${discountCode}`);
 });
 
 // Customer APIs
@@ -33,7 +33,7 @@ router.get('/customer/check-discount', function(req, res) {
 
 router.post('/customer/make-purchase', function(req, res) {
     transactionCount++;
-    res.send('Purchase made');
+    res.status(200).send('Purchase made');
 });
 
 // Report API
